@@ -16,7 +16,7 @@ Signed-off-by: Aun-Ali Zaidi <admin@kodeit.net>
  create mode 100644 drivers/net/wireless/broadcom/brcm80211/brcmfmac/settings.h
 
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.h b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.h
-index 144cf4570bc3..3826403ec5ff 100644
+index 8b5f49997..6cde5ee13 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.h
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.h
 @@ -8,15 +8,14 @@
@@ -117,6 +117,6 @@ index 000000000000..5c4aa32fb73d
 +};
 +
 +#endif /* BRCMFMAC_SETTINGS_H */
--- 
+--
 2.24.1
 

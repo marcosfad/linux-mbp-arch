@@ -14,7 +14,7 @@ address is still 0x300 on T2 Macs.
  1 file changed, 39 insertions(+), 33 deletions(-)
 
 diff --git a/drivers/hwmon/applesmc.c b/drivers/hwmon/applesmc.c
-index c80b96f04..6c6426982 100644
+index 000ea53bc..01fd1c356 100644
 --- a/drivers/hwmon/applesmc.c
 +++ b/drivers/hwmon/applesmc.c
 @@ -34,10 +34,11 @@
@@ -235,7 +235,7 @@ index c80b96f04..6c6426982 100644
  	if (ret)
  		return ret;
  
-@@ -1433,7 +1439,7 @@ static int __init applesmc_init(void)
+@@ -1434,7 +1440,7 @@ static int __init applesmc_init(void)
  		goto out;
  	}
  
@@ -244,7 +244,7 @@ index c80b96f04..6c6426982 100644
  								"applesmc")) {
  		ret = -ENXIO;
  		goto out;
-@@ -1455,7 +1461,7 @@ static int __init applesmc_init(void)
+@@ -1456,7 +1462,7 @@ static int __init applesmc_init(void)
  out_driver:
  	platform_driver_unregister(&applesmc_driver);
  out_region:
@@ -253,7 +253,7 @@ index c80b96f04..6c6426982 100644
  out:
  	pr_warn("driver init failed (ret=%d)!\n", ret);
  	return ret;
-@@ -1465,7 +1471,7 @@ static void __exit applesmc_exit(void)
+@@ -1466,7 +1472,7 @@ static void __exit applesmc_exit(void)
  {
  	platform_device_unregister(pdev);
  	platform_driver_unregister(&applesmc_driver);
@@ -262,6 +262,6 @@ index c80b96f04..6c6426982 100644
  }
  
  module_init(applesmc_init);
--- 
+--
 2.25.0
 

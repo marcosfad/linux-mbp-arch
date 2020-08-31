@@ -1,5 +1,5 @@
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
-index a3a257089696..d2392a8fdbbb 100644
+index b5b66ce62..9a9e082eb 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/chip.c
 @@ -723,9 +723,12 @@ static u32 brcmf_chip_tcm_rambase(struct brcmf_chip_priv *ci)
@@ -16,7 +16,7 @@ index a3a257089696..d2392a8fdbbb 100644
  		brcmf_err("unknown chip: %s\n", ci->pub.name);
  		break;
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
-index 39381cbde89e..a262e2eb36af 100644
+index a9575ae8a..d5cc58659 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c
 @@ -48,6 +48,7 @@ enum brcmf_pcie_state {
@@ -68,7 +68,7 @@ index 39381cbde89e..a262e2eb36af 100644
  };
  
 diff --git a/drivers/net/wireless/broadcom/brcm80211/include/brcm_hw_ids.h b/drivers/net/wireless/broadcom/brcm80211/include/brcm_hw_ids.h
-index c6c4be05159d..8c426683491a 100644
+index c6c4be051..8c4266834 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/include/brcm_hw_ids.h
 +++ b/drivers/net/wireless/broadcom/brcm80211/include/brcm_hw_ids.h
 @@ -36,6 +36,7 @@

@@ -1,24 +1,5 @@
-From cf96571bf95a197b5ae83e60225421251178937b Mon Sep 17 00:00:00 2001
-From: Paul Pawlowski <paul@mrarm.io>
-Date: Sun, 17 Nov 2019 23:12:14 +0100
-Subject: [PATCH 4/6] applesmc: key interface wrappers
-
-This change replaces the read_smc and write_smc
-methods with wrappers, additionally removing the
-command id parameter from them (and introducing
-get_smc_key_by_index and get_smc_key_info).
-
-This is done as to allow simple implementation
-replacement on T2 Macs. The newly introduced
-methods mentioned in the previous paragraph need
-special handling on T2 and as such had to be
-separated.
----
- drivers/hwmon/applesmc.c | 93 ++++++++++++++++++++++++++++------------
- 1 file changed, 65 insertions(+), 28 deletions(-)
-
 diff --git a/drivers/hwmon/applesmc.c b/drivers/hwmon/applesmc.c
-index e683ec6ad0ca..eda11a6bb327 100644
+index 0a112b62c..9ce56d783 100644
 --- a/drivers/hwmon/applesmc.c
 +++ b/drivers/hwmon/applesmc.c
 @@ -164,7 +164,7 @@ static const int debug;
@@ -226,6 +207,3 @@ index e683ec6ad0ca..eda11a6bb327 100644
  	cache->valid = 1;
  
  out:
--- 
-2.25.0
-

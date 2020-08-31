@@ -119,7 +119,7 @@ index 8fa38658e..7da0ef312 100644
  struct brcmf_core *brcmf_chip_get_core(struct brcmf_chip *chip, u16 coreid);
  struct brcmf_core *brcmf_chip_get_d11core(struct brcmf_chip *pub, u8 unit);
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.c
-index dec25e415..384549237 100644
+index e3758bd86..46a525278 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/common.c
 @@ -67,6 +67,10 @@ static int brcmf_iapp_enable;
@@ -176,10 +176,10 @@ index 39381cbde..a9575ae8a 100644
  		ret = PTR_ERR(devinfo->ci);
  		devinfo->ci = NULL;
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
-index 310d8075f..7dced3376 100644
+index e8712ad3a..13eb69458 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
-@@ -3938,7 +3938,7 @@ brcmf_sdio_probe_attach(struct brcmf_sdio *bus)
+@@ -3956,7 +3956,7 @@ brcmf_sdio_probe_attach(struct brcmf_sdio *bus)
  		goto fail;
  	}
  
@@ -217,6 +217,6 @@ index 5c4aa32fb..9840a4cd3 100644
  };
  
  #endif /* BRCMFMAC_SETTINGS_H */
--- 
+--
 2.24.1
 
